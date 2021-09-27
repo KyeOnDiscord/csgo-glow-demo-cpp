@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{5e797259-47d9-41e9-8352-9330f9721fe2}</ProjectGuid>
+    <RootNamespace>csgoglowdemocpp</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnabled>false</VcpkgEnabled>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="ChamStruct.h" />
+    <ClInclude Include="GlowStruct.h" />
+    <ClInclude Include="includes\curlpp\config.win32.h" />
+    <ClInclude Include="includes\curlpp\cURLpp.hpp" />
+    <ClInclude Include="includes\curlpp\Easy.hpp" />
+    <ClInclude Include="includes\curlpp\Exception.hpp" />
+    <ClInclude Include="includes\curlpp\Form.hpp" />
+    <ClInclude Include="includes\curlpp\Info.hpp" />
+    <ClInclude Include="includes\curlpp\Infos.hpp" />
+    <ClInclude Include="includes\curlpp\internal\buildconfig.h" />
+    <ClInclude Include="includes\curlpp\internal\CurlHandle.hpp" />
+    <ClInclude Include="includes\curlpp\internal\global.h" />
+    <ClInclude Include="includes\curlpp\internal\OptionContainer.hpp" />
+    <ClInclude Include="includes\curlpp\internal\OptionContainerType.hpp" />
+    <ClInclude Include="includes\curlpp\internal\OptionList.hpp" />
+    <ClInclude Include="includes\curlpp\internal\OptionSetter.hpp" />
+    <ClInclude Include="includes\curlpp\internal\SList.hpp" />
+    <ClInclude Include="includes\curlpp\Multi.hpp" />
+    <ClInclude Include="includes\curlpp\Option.hpp" />
+    <ClInclude Include="includes\curlpp\OptionBase.hpp" />
+    <ClInclude Include="includes\curlpp\Options.hpp" />
+    <ClInclude Include="includes\curlpp\Types.hpp" />
+    <ClInclude Include="includes\curl\curl.h" />
+    <ClInclude Include="includes\curl\curlver.h" />
+    <ClInclude Include="includes\curl\easy.h" />
+    <ClInclude Include="includes\curl\mprintf.h" />
+    <ClInclude Include="includes\curl\multi.h" />
+    <ClInclude Include="includes\curl\options.h" />
+    <ClInclude Include="includes\curl\stdcheaders.h" />
+    <ClInclude Include="includes\curl\system.h" />
+    <ClInclude Include="includes\curl\typecheck-gcc.h" />
+    <ClInclude Include="includes\curl\urlapi.h" />
+    <ClInclude Include="includes\json.hpp" />
+    <ClInclude Include="includes\utilspp\clone_ptr.hpp" />
+    <ClInclude Include="includes\utilspp\EmptyType.hpp" />
+    <ClInclude Include="includes\utilspp\Functors.hpp" />
+    <ClInclude Include="includes\utilspp\functor\Binder.hpp" />
+    <ClInclude Include="includes\utilspp\functor\Functor.hpp" />
+    <ClInclude Include="includes\utilspp\functor\FunctorHandler.hpp" />
+    <ClInclude Include="includes\utilspp\functor\FunctorImpl.hpp" />
+    <ClInclude Include="includes\utilspp\functor\MemFunHandler.hpp" />
+    <ClInclude Include="includes\utilspp\NonCopyable.hpp" />
+    <ClInclude Include="includes\utilspp\NullType.hpp" />
+    <ClInclude Include="includes\utilspp\Singleton.hpp" />
+    <ClInclude Include="includes\utilspp\singleton\CreationStatic.hpp" />
+    <ClInclude Include="includes\utilspp\singleton\CreationUsingNew.hpp" />
+    <ClInclude Include="includes\utilspp\singleton\LifetimeDefault.hpp" />
+    <ClInclude Include="includes\utilspp\singleton\LifetimeLibrary.hpp" />
+    <ClInclude Include="includes\utilspp\singleton\LifetimeWithLongevity.hpp" />
+    <ClInclude Include="includes\utilspp\singleton\PrivateMembers.hpp" />
+    <ClInclude Include="includes\utilspp\singleton\SingletonHolder.hpp" />
+    <ClInclude Include="includes\utilspp\SmartPtr.hpp" />
+    <ClInclude Include="includes\utilspp\ThreadingFactoryMutex.hpp" />
+    <ClInclude Include="includes\utilspp\ThreadingSingle.hpp" />
+    <ClInclude Include="includes\utilspp\TypeList.hpp" />
+    <ClInclude Include="includes\utilspp\TypeTrait.hpp" />
+    <ClInclude Include="KyeMem.h" />
+    <ClInclude Include="offsets.h" />
+    <ClInclude Include="proc.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="proc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="includes\curlpp\Easy.inl" />
+    <None Include="includes\curlpp\Info.inl" />
+    <None Include="includes\curlpp\internal\CurlHandle.inl" />
+    <None Include="includes\curlpp\internal\OptionContainer.inl" />
+    <None Include="includes\curlpp\internal\OptionSetter.inl" />
+    <None Include="includes\curlpp\Option.inl" />
+    <None Include="includes\utilspp\singleton\CreationStatic.inl" />
+    <None Include="includes\utilspp\singleton\CreationUsingNew.inl" />
+    <None Include="includes\utilspp\singleton\LifetimeDefault.inl" />
+    <None Include="includes\utilspp\singleton\LifetimeLibrary.inl" />
+    <None Include="includes\utilspp\singleton\LifetimeWithLongevity.inl" />
+    <None Include="includes\utilspp\singleton\PrivateMembers.inl" />
+    <None Include="includes\utilspp\singleton\SingletonHolder.inl" />
+    <None Include="includes\utilspp\ThreadingFactoryMutex.inl" />
+    <None Include="includes\utilspp\ThreadingSingle.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
